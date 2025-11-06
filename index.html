@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yi — Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1>Yi</h1>
+  <p class="tagline">EdTech · Web · Creative Coding</p>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Hi! I build small tools for learning German, creative web toys, and simple portfolios for friends.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Yi — <a href="https://github.com/yoooyii">GitHub</a></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  fetch('projects.json')
+    .then(r => r.json())
+    .then(list => {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = list.map(p => `
+        <a class="card" href="${p.demo || p.repo}" target="_blank" rel="noopener">
+          <img src="${p.thumb || 'thumb-placeholder.webp'}" alt="${p.title}" />
+          <div class="card-body">
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+            <div class="tags">${(p.tags||[]).map(t=>`<span>${t}</span>`).join('')}</div>
+          </div>
+        </a>
+      `).join('');
+    });
+</script>
+</body>
+</html>

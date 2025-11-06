@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Vokabel Web",
+    "desc": "德语词卡网页：键盘翻页、筛选、多课本地存储。",
+    "tags": ["HTML","JS","LocalStorage"],
+    "demo": "https://yoooyii.github.io/vokabel-web/",
+    "repo": "https://yoooyii.github.io/vokabel-web/",
+    "thumb": "assets/vokabel.jpg"
+  },
+  {
+    "title": "German Quiz Mini",
+    "desc": "完形填空+选择题的小测页面模板。",
+    "tags": ["EdTech","Vanilla JS"],
+    "repo": "https://github.com/yoooyii/german-quiz-mini"
+  }
+]
