@@ -35,7 +35,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  fetch('projects.json')
+  fetch('projects.json?ts=' + Date.now())
     .then(r => r.json())
     .then(list => {
       const grid = document.getElementById('grid');
