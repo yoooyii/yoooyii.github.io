@@ -1,16 +1,31 @@
-## Hi there 👋
+<h2 align="center">yooyii</h2>
 
-<!--
-**yoooyii/yoooyii** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+✨ creating little worlds with code ✨<br>
+<sub>web · art · language · experiments</sub>
+</p>
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🪄 Projects
+- 🎓 [Vokabel Web](https://yoooyii.github.io/vokabel-web/) — learn German with a personal touch   
+- 🌌 [Art Gallery](#) — a minimal portfolio site for creative works  
+- 🧩 [Playground](#) — tiny experiments with React, p5.js, and more
+
+---
+
+### ⚙️ Tech & Tools
+`HTML` · `CSS` · `JavaScript` · `React` · `p5.js`  
+`Python` · `Data Analysis` · `Machine Learning`
+
+---
+
+### 💬 About
+Building stuff I wish existed.  
+Mixing code and curiosity.
+
+---
+
+<p align="center">
+🖤 <sub>made with curiosity</sub>
+</p>
