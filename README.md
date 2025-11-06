@@ -1,4 +1,4 @@
-<h2 align="center">Yi</h2>
+<h2 align="center">yooyii</h2>
 
 <p align="center">
 ✨ creating little worlds with code ✨<br>
@@ -10,7 +10,7 @@
 ### 🪄 Projects
 - 🎓 [Vokabel Web](https://yoooyii.github.io/vokabel-web/) — learn German with a personal touch   
 - 🌌 [Art Gallery](#) — a minimal portfolio site for creative works  
-- 🧩 [Playground](#) — tiny experiments with React, p5.js, and more
+- 🧩 [Playground](https://yoooyii.github.io/particle-player/) — tiny experiments with React, p5.js, and more
 
 ---
 
@@ -29,6 +29,3 @@ Mixing code and curiosity.
 <p align="center">
 🖤 <sub>made with curiosity</sub>
 </p>
-
-
-
