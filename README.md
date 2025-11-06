@@ -1,4 +1,4 @@
-<h2 align="center">yYi</h2>
+<h2 align="center">Yi</h2>
 
 <p align="center">
 ✨ creating little worlds with code ✨<br>
@@ -29,5 +29,6 @@ Mixing code and curiosity.
 <p align="center">
 🖤 <sub>made with curiosity</sub>
 </p>
+
 
 
