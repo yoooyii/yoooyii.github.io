@@ -8,10 +8,11 @@
     "thumb": "assets/vokabel.png"
   },
   {
-    "title": "German Quiz Mini",
-    "desc": "完形填空+选择题的小测页面模板。",
+    "title": "German Mini-Tests",
+    "desc": "德语课堂小测",
     "tags": ["EdTech","Vanilla JS"],
     "repo": "https://github.com/yoooyii/german-quiz-mini"
   }
 ]
+
 
