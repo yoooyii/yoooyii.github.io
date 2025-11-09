@@ -125,9 +125,8 @@ body.theme-ocean nav a:hover::after{ transform: scaleX(1); }
 /* 卡片：轻微“玻璃感” + 半透明悬浮 */
 body.theme-ocean .card{
   background: rgba(255, 255, 255, 0.04); /* 半透明白 */
-  backdrop-filter: blur(8px) saturate(180%); /* 模糊+亮度 */
+  backdrop-filter: blur(8px) saturate(100%); /* 模糊+亮度 */
   border: 1px solid rgba(255, 255, 255, 0.25); /* 轻微边线 */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* 柔和阴影 */
   /*color: #fff;  内文字颜色 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
