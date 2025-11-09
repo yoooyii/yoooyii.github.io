@@ -9,7 +9,6 @@
 
 ### 🪄 Projects
 - 🎓 [Vokabel Web](https://yoooyii.github.io/vokabel-web/) — learn German with a personal touch   
-- 🌌 [Art Gallery](#) — a minimal portfolio site for creative works  
 - 🧩 [Playground](https://yoooyii.github.io/particle-player/) — tiny experiments with React, p5.js, and more
 
 ---
@@ -21,11 +20,10 @@
 ---
 
 ### 💬 About
-Building stuff I wish existed.  
+Building stuff I like.  
 Mixing code and curiosity.
 
----
 
 <p align="center">
-🖤 <sub>made with curiosity</sub>
+🦈 <sub>made by Shark</sub>
 </p>
