@@ -11,14 +11,16 @@
     "title": "German Quiz Mini",
     "desc": "完形填空+选择题的小测页面模板。",
     "tags": ["EdTech","Vanilla JS"],
-    "repo": "https://github.com/yoooyii/german-quiz-mini"
+    "demo": "https://yoooyii.github.io/de-tests/",
+    "repo": "https://yoooyii.github.io/de-tests/",
+    "thumb": "assets/detests.png"
   },
   {
     "title": "Particle Player",
     "desc": "粒子与音乐交织的互动网页：点击播放，文字随光舞动 ✨",
     "tags": ["p5.js", "Creative", "Music"],
     "demo": "https://yoooyii.github.io/particle-player/",
-    "repo": "https://github.com/yoooyii/particle-player",
+    "repo": "https://yoooyii.github.io/particle-player/",
     "thumb": "assets/particle.png"
   }
 ]
