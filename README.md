@@ -26,5 +26,5 @@ Mixing code and curiosity.
 
 
 <p align="center">
-🦈 <sub>made by Shark</sub>
+🦈 <sub>made by Yi</sub>
 </p>

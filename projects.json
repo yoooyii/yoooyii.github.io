@@ -17,7 +17,7 @@
   },
   {
     "title": "Particle Player",
-    "desc": "一个可以玩粒子和放音乐链接的网页？/A website where you can play with particles music links?",
+    "desc": "一个可以玩粒子和放音乐链接的网页？/A website where you can play with particles and embed music links?",
     "tags": ["p5.js", "Creative", "Music"],
     "demo": "https://yoooyii.github.io/particle-player/",
     "repo": "https://yoooyii.github.io/particle-player/",

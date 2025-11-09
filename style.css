@@ -266,18 +266,19 @@ body.theme-cyberpixel .card img{
 }
 
 /* ===== About: 左图右文 ===== */
+:root { --avatar: 220px; } 
 #about .about-container{
   display: grid;                 /*容易被其他规则影响布局 */
-  grid-template-columns: 144px 1fr;
-  align-items: start;
-  column-gap: 24px;
+  grid-template-columns: var(--avatar) 1fr;
+  align-items: center;
+  column-gap: 48px;
   row-gap: 12px;                 /* 以防小屏换行后有间距 */
   margin-top: 12px;
 }
 
 #about .about-avatar{
-  width: 240px;
-  height: 240px;
+  width: var(--avatar);
+  height: var(--avatar);
   border-radius: 50%;
   object-fit: cover;
   border: none; 
