@@ -1,7 +1,7 @@
 [
   {
     "title": "Vokabel Web",
-    "desc": "德语词卡网页：键盘翻页、筛选、多课本地存储。",
+    "desc": "德语记单词网页/German vocabulary learning website",
     "tags": ["HTML","JS","LocalStorage"],
     "demo": "https://yoooyii.github.io/vokabel-web/",
     "repo": "https://yoooyii.github.io/vokabel-web/",
@@ -9,7 +9,7 @@
   },
   {
     "title": "German Quiz Mini",
-    "desc": "完形填空+选择题的小测页面模板。",
+    "desc": "给朋友做的德语小测验/little German tests for friends",
     "tags": ["EdTech","Vanilla JS"],
     "demo": "https://yoooyii.github.io/de-tests/",
     "repo": "https://yoooyii.github.io/de-tests/",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Particle Player",
-    "desc": "粒子与音乐交织的互动网页：点击播放，文字随光舞动 ✨",
+    "desc": "一个可以玩粒子和放音乐链接的网页？/A website where you can play with particles music links?",
     "tags": ["p5.js", "Creative", "Music"],
     "demo": "https://yoooyii.github.io/particle-player/",
     "repo": "https://yoooyii.github.io/particle-player/",

@@ -8,8 +8,9 @@
 ---
 
 ### 🪄 Projects
-- 🎓 [Vokabel Web](https://yoooyii.github.io/vokabel-web/) — learn German with a personal touch   
-- 🧩 [Playground](https://yoooyii.github.io/particle-player/) — tiny experiments with React, p5.js, and more
+-  [Vokabel Web](https://yoooyii.github.io/vokabel-web/) — learn German with a personal touch   
+-  [Playground](https://yoooyii.github.io/particle-player/) — tiny experiments with React, p5.js, and more
+-  [DE Tests](https://yoooyii.github.io/de-tests/) — monthly German mini-quizzes
 
 ---
 

@@ -35,7 +35,10 @@
 
   <section id="about">
     <h2>About</h2>
+    <img id="avatar" alt="avatar" style="width:72px;height:72px;border-radius:50%;object-fit:cover;margin:8px 0;">
+    <p id="desc"></p>
     <p id="about-text"></p>
+    <p id="contact"></p>
     <ul id="about-links"></ul>
   </section>
 </main>
@@ -63,7 +66,7 @@
       `).join('');
     });
   (function(){
-    const c=document.getElementById('caustics'); const ctx=c.getContext('2d');
+    const c=document.getElementById('caustics'); if(!c) return; const ctx=c.getContext('2d'); // ← 没有 canvas 就直接跳过整个特效
     function resize(){ c.width=innerWidth; c.height=innerHeight; } resize();
     addEventListener('resize', resize);
     let t=0;
