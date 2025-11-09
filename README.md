@@ -1,4 +1,4 @@
-<h2 align="center">yooyii</h2>
+<h2 align="center">Yi</h2>
 
 <p align="center">
 ✨ creating little worlds with code ✨<br>
