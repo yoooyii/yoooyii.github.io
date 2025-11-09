@@ -13,12 +13,12 @@ h2 { margin: 24px 0 12px; }
 
 .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:16px; }
 .card { background:#fff; border:1px solid #eee; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 2px 8px rgba(0,0,0,.04); transition: transform .12s ease; }
-.card:hover { transform: translateY(-2px); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4); }
 .card img { width:100%; aspect-ratio: 16/9; object-fit: cover; background:#f0f0f0; }
 .card-body { padding:12px 14px 14px; }
-.card h3 { margin:0 0 6px; font-size:18px; }
-.card p { margin:0 0 8px; color:#555; min-height: 38px; }
-.tags span { font-size:12px; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; margin-right:6px; color:#374151; background:#f9fafb; }
+.card h3 { color: #eaf6ff; margin:0 0 6px; font-size:18px; }
+.card p { margin:0 0 8px; color: rgba(255, 255, 255, 0.85); min-height: 38px; }
+.tags span { font-size:12px; padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; margin-right:6px; color: #fff; background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3);}
 
 footer { text-align:center; color:#777; padding:18px 0 34px; }
 /* ===== THEME: Ocean ===== */
@@ -125,11 +125,14 @@ body.theme-ocean nav a::after{
 }
 body.theme-ocean nav a:hover::after{ transform: scaleX(1); }
 
-/* 卡片：轻微“玻璃感”悬浮 */
+/* 卡片：轻微“玻璃感” + 半透明悬浮 */
 body.theme-ocean .card{
-  background: rgba(255,255,255,.88);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  background: rgba(255, 255, 255, 0.08); /* 半透明白 */
+  backdrop-filter: blur(8px) saturate(180%); /* 模糊+亮度 */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* 轻微边线 */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* 柔和阴影 */
+  color: #fff; /* 内文字颜色 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #caustics{ position: fixed; inset:0; pointer-events:none; mix-blend-mode:screen; }
 
