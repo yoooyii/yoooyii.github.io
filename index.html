@@ -35,7 +35,8 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>Hi! I build small tools for learning German, creative web toys, and simple portfolios for friends.</p>
+    <p id="about-text"></p>
+    <ul id="about-links"></ul>
   </section>
 </main>
 
@@ -91,6 +92,30 @@
     }
     draw();
   })();
+
+  async function loadAbout(){
+    const res = await fetch('about.json');
+    const data = await res.json();
+    document.getElementById('avatar').src = data.avatar;
+    document.getElementById('desc').textContent = data.description;
+    document.getElementById('about-text').textContent = data.about_text;
+    document.getElementById('contact').innerHTML = `<strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a>`;
+
+    const links = document.getElementById('about-links');
+    if(data.email){
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a>`;
+      links.appendChild(li);
+    }
+    if(data.links){
+      for(const [name,url] of Object.entries(data.links)){
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${name}:</strong> <a href="${url}" target="_blank">${url}</a>`;
+        links.appendChild(li);
+      }
+    }
+  }
+  loadAbout();
 </script>
 
 <!-- 海洋微粒层 -->
