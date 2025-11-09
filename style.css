@@ -276,11 +276,13 @@ body.theme-cyberpixel .card img{
 }
 
 #about .about-avatar{
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
+  border: none; 
   box-shadow: 0 0 12px rgba(0,234,255,.25);
+  margin-top: 8px;
 }
 
 #about .about-text{
