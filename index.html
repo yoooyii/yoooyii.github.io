@@ -101,11 +101,6 @@
     document.getElementById('contact').innerHTML = `<strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a>`;
 
     const links = document.getElementById('about-links');
-    if(data.email){
-      const li = document.createElement('li');
-      li.innerHTML = `<strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a>`;
-      links.appendChild(li);
-    }
     if(data.links){
       for(const [name,url] of Object.entries(data.links)){
         const li = document.createElement('li');
