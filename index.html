@@ -6,10 +6,13 @@
   <title>Yi — Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<!-- 海洋主题 -->
+<body class="theme-ocean">
+<canvas id="caustics"></canvas>
 <header class="site-header">
   <h1>Yi</h1>
-  <p class="tagline">EdTech · Web · Creative Coding</p>
+  <p class="tagline">Web · Creative Coding</p>
   <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
@@ -32,9 +35,9 @@
   <p>© <span id="year"></span> Yi — <a href="https://github.com/yoooyii">GitHub</a></p>
 </footer>
 
+<!-- 年份 + 渲染项目 -->
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-
   fetch('projects.json?ts=' + Date.now())
     .then(r => r.json())
     .then(list => {
@@ -50,6 +53,39 @@
         </a>
       `).join('');
     });
+  (function(){
+    const c=document.getElementById('caustics'); const ctx=c.getContext('2d');
+    function resize(){ c.width=innerWidth; c.height=innerHeight; } resize();
+    addEventListener('resize', resize);
+    let t=0;
+    function draw(){
+      t+=0.004; const w=c.width, h=c.height;
+      const g=ctx.createLinearGradient(0,0,0,h); g.addColorStop(0,'rgba(255,255,255,.18)'); g.addColorStop(.3,'rgba(255,255,255,.06)'); g.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.clearRect(0,0,w,h);
+      ctx.globalCompositeOperation='lighter'; ctx.fillStyle=g;
+      const rows=14, cols=22;
+      for(let y=0;y<rows;y++){
+        for(let x=0;x<cols;x++){
+          const u=x/cols, v=y/rows;
+          const amp=1.5+Math.sin((u*10+v*8)+t*6)*0.9;
+          const X = u*w + Math.sin((v*3+t*2))*20;
+          const Y = v*h*0.5 + Math.sin((u*2+t))*10;
+          ctx.beginPath(); ctx.ellipse(X, Y, 80*amp, 12*amp, Math.PI/6, 0, Math.PI*2); ctx.fill();
+        }
+      }
+      ctx.globalCompositeOperation='destination-in';
+      const mask=ctx.createLinearGradient(0,0,0,h);
+      mask.addColorStop(0,'rgba(0,0,0,1)');
+      mask.addColorStop(.4,'rgba(0,0,0,.25)');
+      mask.addColorStop(.7,'rgba(0,0,0,0)');
+      ctx.fillStyle=mask; ctx.fillRect(0,0,w,h);
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
 </script>
+
+<!-- 海洋微粒层 -->
+<div class="ocean-particles"></div>
 </body>
 </html>
