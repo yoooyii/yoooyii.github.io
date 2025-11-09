@@ -14,7 +14,7 @@ h2 { margin: 24px 0 12px; }
 .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:16px; }
 .card { background:#fff; border:1px solid #eee; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow: 0 2px 8px rgba(0,0,0,.04); transition: transform .12s ease; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4); }
-.card img { width:100%; aspect-ratio: 16/9; object-fit: cover; background: transparent; }
+.card img { background: transparent; }
 .card-body { padding:12px 14px 14px; }
 .card h3 { color: #eaf6ff; margin:0 0 6px; font-size:18px; }
 .card p { margin:0 0 8px; color: rgba(255, 255, 255, 0.85); min-height: 38px; }
@@ -42,7 +42,13 @@ body.theme-ocean{
 }
 
 /* 顶部“海面”高光 + 斜向阳光束 */
-body.theme-ocean::before,
+body.theme-ocean::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 40%);
+  border-radius: inherit;
+  pointer-events:none;
+}
 body.theme-ocean::after{
   content:"";
   position: fixed; inset:0; pointer-events:none;
@@ -122,10 +128,21 @@ body.theme-ocean .card{
   backdrop-filter: blur(8px) saturate(180%); /* 模糊+亮度 */
   border: 1px solid rgba(255, 255, 255, 0.25); /* 轻微边线 */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* 柔和阴影 */
-  color: #fff; /* 内文字颜色 */
+  /*color: #fff;  内文字颜色 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #caustics{ position: fixed; inset:0; pointer-events:none; mix-blend-mode:screen; }
 
 /* 让主体至少撑满一屏，高度不够时向下留白 */
 main{ min-height: 79vh; }
+
+/* 卡片内文字改回白色系 */
+body.theme-ocean .card h3{ color:#fff; }
+body.theme-ocean .card p{ color: rgba(255,255,255,0.88); }
+
+/* 标签胶囊也半透明 */
+body.theme-ocean .tags span{
+  background: rgba(255,255,255,0.18);
+  color:#eef6ff;
+  border-color: rgba(255,255,255,0.35);
+}
