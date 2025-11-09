@@ -144,3 +144,123 @@ body.theme-ocean .tags span{
 
 /* 焦散 Canvas 放在最顶叠加 */
 #caustics{ position: fixed; inset: 0; pointer-events: none; mix-blend-mode: screen; }
+
+
+/* =========================
+   Theme: CYBERPIXEL (neon + pixel vibe)
+   ========================= */
+:root{
+  --cp-bg0:#02030a;           /* 深黑底 */
+  --cp-bg1:#0a0f1f;           /* 次层深蓝 */
+  --cp-neon-cyan:#00eaff;     /* 霓虹蓝 */
+  --cp-neon-pink:#ff2bd6;     /* 霓虹粉 */
+  --cp-neon-yellow:#ffe66d;   /* 霓虹黄 */
+  --cp-grid:#00d5ff;          /* 地板网格线 */
+}
+
+body.theme-cyberpixel{
+  color:#d9e7ff;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(0,234,255,.10) 0%, transparent 60%),
+    radial-gradient(120% 80% at 50% 120%, rgba(255,43,214,.10) 0%, transparent 60%),
+    linear-gradient(#000, #000),
+    radial-gradient(circle at 50% 30%, #0c1224 0%, var(--cp-bg0) 60%);
+  background-blend-mode: screen, screen, normal, normal;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  image-rendering: pixelated; /* 像素味 */
+  font-synthesis-weight: none;
+}
+
+/* 顶部/标题/导航配色 */
+body.theme-cyberpixel .site-header h1,
+body.theme-cyberpixel .tagline,
+body.theme-cyberpixel nav a,
+body.theme-cyberpixel h2,
+body.theme-cyberpixel footer{ color:#e8f6ff; }
+
+body.theme-cyberpixel .site-header h1{
+  /* 轻微霓虹泛光 */
+  text-shadow:
+    0 0 6px rgba(0,234,255,.55),
+    0 0 14px rgba(255,43,214,.35);
+  font-family: "VT323", ui-monospace, Menlo, Consolas, monospace; /* 可选像素字体 */
+  letter-spacing: .5px;
+}
+
+/* 导航下划线 → 霓虹条 */
+body.theme-cyberpixel nav a{ position:relative; }
+body.theme-cyberpixel nav a::after{
+  content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px;
+  background: linear-gradient(90deg, var(--cp-neon-cyan), var(--cp-neon-pink));
+  transform: scaleX(0); transform-origin:left; transition: transform .25s ease;
+  box-shadow: 0 0 12px rgba(0,234,255,.5);
+}
+body.theme-cyberpixel nav a:hover::after{ transform: scaleX(1); }
+
+/* 赛博地板网格 */
+body.theme-cyberpixel::before{
+  content:""; position:fixed; left:-10vw; right:-10vw; bottom:-5vh; height:60vh;
+  background:
+    linear-gradient(var(--cp-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cp-grid) 1px, transparent 1px);
+  background-size: 44px 44px, 44px 44px;
+  opacity:.25;
+  transform: perspective(700px) rotateX(65deg) translateY(0);
+  transform-origin: center bottom;
+  filter: drop-shadow(0 0 6px rgba(0,234,255,.6));
+  animation: cpGrid 14s linear infinite;
+  pointer-events: none;
+}
+@keyframes cpGrid{
+  from{ background-position: 0 0, 0 0; }
+  to  { background-position: 0 44px, 44px 0; }
+}
+
+/* CRT 扫描线 + 暗角 */
+body.theme-cyberpixel::after{
+  content:""; position:fixed; inset:0; pointer-events:none;
+  background:
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.04) 0 1px, rgba(0,0,0,0) 1px 3px),
+    radial-gradient(120% 80% at 50% 120%, rgba(0,0,0,.65), transparent 60%);
+  mix-blend-mode: overlay; opacity:.4;
+}
+
+/* 深色玻璃 + 霓虹描边 */
+body.theme-cyberpixel .card{
+  background: rgba(12,14,26,.55) !important;
+  border: 1px solid rgba(0,234,255,.25);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  box-shadow:
+    0 0 0 1px rgba(0,234,255,.12) inset,
+    0 10px 22px rgba(0,0,0,.35),
+    0 0 18px rgba(0,234,255,.18);
+  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+body.theme-cyberpixel .card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(255,43,214,.45);
+  box-shadow:
+    0 0 0 1px rgba(255,43,214,.22) inset,
+    0 14px 30px rgba(0,0,0,.5),
+    0 0 28px rgba(255,43,214,.35);
+}
+body.theme-cyberpixel .card h3{ color:#fff; font-weight:600; }
+body.theme-cyberpixel .card p { color: rgba(230,243,255,.9); }
+
+/* 像素风小胶囊 */
+body.theme-cyberpixel .tags span{
+  color:#dff7ff;
+  border:1px solid rgba(0,234,255,.45);
+  background: linear-gradient(180deg, rgba(0,234,255,.12), rgba(255,43,214,.10));
+  box-shadow: 0 0 10px rgba(0,234,255,.25) inset;
+  text-transform: uppercase; letter-spacing:.3px; font-size: 11px;
+}
+
+/* 图片小屏边框更紧凑 */
+body.theme-cyberpixel .card img{
+  background: #05070f;
+  border-bottom: 1px solid rgba(0,234,255,.18);
+}
