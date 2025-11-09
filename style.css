@@ -267,8 +267,8 @@ body.theme-cyberpixel .card img{
 
 /* ===== About: 左图右文 ===== */
 #about .about-container{
-  display: grid;                 /*不容易被其他规则影响布局 */
-  grid-template-columns: 200px 1fr;
+  display: grid;                 /*容易被其他规则影响布局 */
+  grid-template-columns: 144px 1fr;
   align-items: start;
   column-gap: 24px;
   row-gap: 12px;                 /* 以防小屏换行后有间距 */
@@ -276,11 +276,10 @@ body.theme-cyberpixel .card img{
 }
 
 #about .about-avatar{
-  width: 144px;
-  height: 144px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(0,234,255,.25);
   box-shadow: 0 0 12px rgba(0,234,255,.25);
 }
 
